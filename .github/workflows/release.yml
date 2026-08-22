@@ -19,8 +19,8 @@ jobs:
 
       - name: Verify release source
         run: |
-          git fetch origin main
-          git merge-base --is-ancestor "${GITHUB_SHA}^{commit}" origin/main
+          git fetch origin master
+          git merge-base --is-ancestor "${GITHUB_SHA}^{commit}" origin/master
 
       - name: Install shader tools
         run: |
