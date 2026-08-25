@@ -5,10 +5,9 @@ uniform sampler2D waterNormal;
 uniform sampler2D waterNormalAtlas;
 uniform float frameTimeCounter;
 
-vec4 sampleWaterNormal(vec2 uv) {
+vec4 sampleWaterNormal(vec2 uv, float frameRate) {
 #if WATER_NORMAL_MODE == 1
     const float frameCount = 29.0;
-    const float frameRate = 30.0;
     const float frameSize = 256.0;
     const float atlasHeight = frameCount * frameSize;
 

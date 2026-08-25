@@ -198,17 +198,10 @@ void main() {
     float scrollAngle;
     float scrollRate;
 
-#if WATER_NORMAL_MODE == 1
-    // Half-Life 2's dev/water_normal VMT: one animated normal map with a
-    // TextureScroll proxy running at .05 and 45 degrees.
-    scrollAngle = radians(45.0);
-    scrollRate = 0.05;
-#else
     scrollAngle =
         radians(sourceWaterTextureScrollAngle(underwater));
     scrollRate =
         sourceWaterTextureScrollRate(underwater);
-#endif
 
     vec2 scroll =
         vec2(cos(scrollAngle), sin(scrollAngle)) *
@@ -234,16 +227,19 @@ void main() {
 
 #if WATER_NORMAL_MODE == 1
     vec4 sourceNormal =
-        sampleWaterNormal(uv0);
+        sampleWaterNormal(
+            uv0,
+            sourceWaterNormalFrameRate(underwater)
+        );
 #else
     vec4 normal0 =
-        sampleWaterNormal(uv0);
+        sampleWaterNormal(uv0, 0.0);
 
     vec4 normal1 =
-        sampleWaterNormal(uv1);
+        sampleWaterNormal(uv1, 0.0);
 
     vec4 normal2 =
-        sampleWaterNormal(uv2);
+        sampleWaterNormal(uv2, 0.0);
 
     vec4 sourceNormal =
         (normal0 + normal1 + normal2) / 3.0;

@@ -4,6 +4,11 @@ value.WATER_PRESET.0=EP2 Riverbed 01
 value.WATER_PRESET.1=EP2 Riverbed 02
 value.WATER_PRESET.2=EP2 Silo
 value.WATER_PRESET.3=EP2 Tunnels
+value.WATER_PRESET.4=Lost Coast ATI
+value.WATER_PRESET.5=HL2 Canals 03
+value.WATER_PRESET.6=HL2 Canals Clear
+value.WATER_PRESET.7=EP1 Riverbed 01
+value.WATER_PRESET.8=CSS Militia
 
 option.WATER_NORMAL_MODE=Normal Map Animation
 option.WATER_NORMAL_MODE.comment=Selects the Source water normal animation. 2007 blends three scrolling normal-map layers for smoother motion; 2004 uses the original 29-frame animated normal map with one scrolling layer.

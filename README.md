@@ -2,7 +2,7 @@
 
 Source Water is a Minecraft Iris shader pack that recreates Source Engine water by reverse-engineering the 2004 and 2007 renderer revisions, shaders, and material behavior.
 
-The 2007 path is the default and follows Episode Two water materials. The optional 2004 normal-animation mode restores the original 29-frame animated normal map and classic single-flow sampling. Source planar reflections are adapted to Minecraft with screen-space reflections, while refraction, Fresnel, fog, cheap-water distance blending, and underwater behavior follow their Source counterparts where the rendering pipelines permit it.
+The 2007 path is the default. Included material presets reproduce water from Half-Life 2, Episode One, Episode Two, Lost Coast, and Counter-Strike: Source. The optional 2004 normal-animation mode restores the original 29-frame animated normal map and classic single-flow sampling. Source planar reflections are adapted to Minecraft with screen-space reflections, while refraction, Fresnel, fog, cheap-water distance blending, and underwater behavior follow their Source counterparts where the rendering pipelines permit it.
 
 Pairs especially well with [Squake](https://modrinth.com/mod/squake-fabric-updated).
 

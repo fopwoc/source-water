@@ -70,7 +70,7 @@ for shader_file in "$shader_root"/*.fsh "$shader_root"/*.vsh; do
     validate_shader "$shader_file"
 done
 
-for water_preset in 0 1 2 3; do
+for water_preset in 0 1 2 3 4 5 6 7 8; do
     for normal_mode in 0 1; do
         for water_quality in 0 1 2; do
             for ssr_quality in 0 1 2 3 4; do
@@ -93,4 +93,4 @@ for water_preset in 0 1 2 3; do
     done
 done
 
-echo "Validated all shader programs and 1,440 water fragment variants."
+echo "Validated all shader programs and 3,240 water fragment variants."
