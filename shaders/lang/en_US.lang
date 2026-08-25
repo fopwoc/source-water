@@ -22,12 +22,12 @@ value.WATER_QUALITY.1=Force Expensive
 value.WATER_QUALITY.2=Force Cheap
 
 option.SSR_QUALITY=SSR Quality
-option.SSR_QUALITY.comment=Controls Minecraft's screen-space replacement for Source's planar reflections. SSR Off keeps the Source-style sky fallback; All Reflections Off disables every surface reflection.
-value.SSR_QUALITY.3=SSR Off (Sky Fallback)
-value.SSR_QUALITY.4=All Reflections Off
+option.SSR_QUALITY.comment=Controls SSR replacement for Source's planar reflections. SSR Off keeps the Source-style sky fallback; All Reflections Off disables every surface reflection.
 value.SSR_QUALITY.0=Performance
 value.SSR_QUALITY.1=Balanced
 value.SSR_QUALITY.2=High
+value.SSR_QUALITY.3=SSR Off (Sky only)
+value.SSR_QUALITY.4=All Reflections Off
 
 option.SSR_RESOLUTION=SSR Resolution
 option.SSR_RESOLUTION.comment=Sets the resolution used for SSR. Lower scales improve performance and reduce reflection detail; 1.0x uses full screen resolution.
@@ -40,7 +40,7 @@ option.EXPENSIVE_WATER_DISTANCE=Expensive Water Distance (Chunks)
 option.EXPENSIVE_WATER_DISTANCE.comment=In Auto mode, expensive water blends into cheap water across the final chunk and becomes fully cheap at this distance.
 
 option.CHEAP_WATER_FRESNEL_F0=Cheap Water Fresnel Floor
-option.CHEAP_WATER_FRESNEL_F0.comment=Sets the minimum sky reflection at normal incidence. 0.0 follows Source's Fresnel formula; the default 0.04 keeps Minecraft's cubemap-free fallback readable.
+option.CHEAP_WATER_FRESNEL_F0.comment=Sets the minimum sky reflection at normal incidence. 0.0 follows Source's Fresnel formula; the default 0.04 keeps cubemap-free fallback readable.
 
 option.REFRACTION_MULTIPLIER=Refraction Scale
 option.REFRACTION_MULTIPLIER.comment=Scales the refraction amount from the selected Source material. 1.0 preserves the material's original value.
@@ -49,19 +49,19 @@ option.REFLECTION_MULTIPLIER=Reflection Scale
 option.REFLECTION_MULTIPLIER.comment=Scales the reflection amount from the selected Source material. 1.0 preserves the material's original value.
 
 option.WATER_NORMAL_SCALE=Normal Map Scale
-option.WATER_NORMAL_SCALE.comment=Scales the surface normal map in world space. Higher values create smaller, denser ripples.
+option.WATER_NORMAL_SCALE.comment=Scales the surface normal map. Higher values create smaller, denser ripples.
 
 option.WATER_SPEED_MULTIPLIER=Water Animation Speed
 option.WATER_SPEED_MULTIPLIER.comment=Scales normal-map scrolling and frame animation. 1.0 preserves the base rates of the selected material and animation mode.
 
 option.REFLECTION_OVERBRIGHT=Reflection Overbright
-option.REFLECTION_OVERBRIGHT.comment=Applies Source-style overbright to reflections when surface refraction blur is active. 1.0 leaves brightness unchanged.
+option.REFLECTION_OVERBRIGHT.comment=Applies Source-style overbright to reflections when surface refraction blur is active. 1.0 follows original implementation.
 
 option.SURFACE_REFRACTION_BLUR=Surface Refraction Blur
-option.SURFACE_REFRACTION_BLUR.comment=Blurs the refracted scene seen through the water surface. The included Source materials do not enable it; 0.0 keeps the view sharp.
+option.SURFACE_REFRACTION_BLUR.comment=Blurs the refracted scene seen through the water surface. The included Source materials do not enable this effect. This setting is based on the engine's real boolean $blurrefract parameter, but implements it as an adjustable adaptation; 0.0 preserves the original sharp image.
 
 option.UNDERWATER_OVERLAY_MULTIPLIER=Underwater Warp Strength
-option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Controls Source-style full-screen refraction while the camera is underwater. Riverbed 02 disables the effect in 2007 mode.
+option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Changes the strength of full-screen refraction while the camera is underwater. Whether the effect is enabled depends on the selected material and Source revision; for example, Riverbed 02 disables it in Source 2007 mode.
 
 option.UNDERWATER_OVERLAY_SCALE=Underwater Warp Scale
 option.UNDERWATER_OVERLAY_SCALE.comment=Scales the underwater warp normal map in screen space. Higher values create a smaller, denser warp pattern.

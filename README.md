@@ -1,17 +1,19 @@
 # Source Water
 
-Source Water is a focused Minecraft shader pack for Iris that replaces vanilla water rendering with a reconstruction of water from Source Engine games. Its goal is to bring the appearance and behavior of classic Source water into Minecraft without turning the pack into a general lighting or art-style overhaul.
+Shader pack for Iris that replaces vanilla water rendering with a reconstruction of water from Source Engine games. Its goal is to bring the appearance and behavior of classic Source water into Minecraft without turning the pack into a general lighting or art-style overhaul.
 
-The implementation is based primarily on the Source 2007 renderer, with the 2004 renderer preserved as an optional classic normal-animation mode. Water materials are selected manually in the shader settings rather than inferred from Minecraft biomes, allowing the same world to use the character of a specific Source game or map.
+The implementation is based primarily on the Source 2007 renderer, with the 2004 renderer preserved as an optional classic normal-animation mode.
+
+The main inspiration for that shader pack was a random YouTube video about Chinese cs 1.6 F2P version where some Source graphical features was packported. Like *water*!
 
 ## Recreated Source behavior
 
-- Expensive and cheap water rendering with a distance-based LOD transition.
+- Source's expensive and cheap water rendering paths, with a distance-based LOD transition between them.
 - Material-specific surface and underwater fog colors, fog ranges, refraction, reflection distortion, and normal-map flow.
 - Fresnel-driven reflections, three-layer Source 2007 normal movement, and the original 29-frame Source 2004 animated normal map.
 - Separate underwater material behavior and optional full-screen water warp.
 
-## Minecraft adaptations
+## Adaptations
 
 - Source planar reflection render targets are replaced with screen-space reflections for visible scene geometry and a sky fallback when SSR cannot provide a result.
 - Source environment cubemaps are approximated with a light-aware Minecraft sky reflection, including the cheap-water path.
