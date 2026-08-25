@@ -1,62 +1,62 @@
-option.WATER_PRESET=Water Preset
-option.WATER_PRESET.comment=Selects an Episode Two 2007 above-water and beneath-water VMT pair.
+option.WATER_PRESET=Source Material
+option.WATER_PRESET.comment=Selects a Source water material preset. Each preset defines the surface and underwater color, fog range, refraction, reflection, and flow.
 value.WATER_PRESET.0=EP2 Riverbed 01
 value.WATER_PRESET.1=EP2 Riverbed 02
 value.WATER_PRESET.2=EP2 Silo
 value.WATER_PRESET.3=EP2 Tunnels
 
-option.WATER_NORMAL_MODE=Normal Animation
-option.WATER_NORMAL_MODE.comment=Source 2007 uses the Episode Two static normal with three UV flows. Source 2004 uses the original 29-frame normal at 30 FPS with one classic UV flow.
-value.WATER_NORMAL_MODE.0=Source 2007
-value.WATER_NORMAL_MODE.1=Source 2004
+option.WATER_NORMAL_MODE=Normal Map Animation
+option.WATER_NORMAL_MODE.comment=Selects the Source water normal animation. 2007 blends three scrolling normal-map layers for smoother motion; 2004 uses the original 29-frame animated normal map with one scrolling layer.
+value.WATER_NORMAL_MODE.0=Source 2007 (Orange Box)
+value.WATER_NORMAL_MODE.1=Source 2004 (Classic)
 
-option.WATER_QUALITY=Water Quality
-option.WATER_QUALITY.comment=Selects Source's automatic distance blend, $forceexpensive, or $forcecheap surface path.
-value.WATER_QUALITY.0=Source Automatic
+option.WATER_QUALITY=Source Water LOD
+option.WATER_QUALITY.comment=Controls the Source-style expensive/cheap water LOD. Auto blends from the expensive path (refraction and optional SSR) to the cheap path (fog color and sky fallback) at the selected distance.
+value.WATER_QUALITY.0=Auto
 value.WATER_QUALITY.1=Force Expensive
 value.WATER_QUALITY.2=Force Cheap
 
-option.SSR_QUALITY=Reflection Quality
-option.SSR_QUALITY.comment=SSR Off keeps Source's cheap envmap fallback. All Off removes every surface reflection like a potato preset. Other modes control Minecraft's screen-space substitute for Source's planar reflection render target.
-value.SSR_QUALITY.3=SSR Off
-value.SSR_QUALITY.4=All Off (Potato)
+option.SSR_QUALITY=SSR Quality
+option.SSR_QUALITY.comment=Controls Minecraft's screen-space replacement for Source's planar reflections. SSR Off keeps the Source-style sky fallback; All Reflections Off disables every surface reflection.
+value.SSR_QUALITY.3=SSR Off (Sky Fallback)
+value.SSR_QUALITY.4=All Reflections Off
 value.SSR_QUALITY.0=Performance
 value.SSR_QUALITY.1=Balanced
 value.SSR_QUALITY.2=High
 
-option.SSR_RESOLUTION=Reflection Resolution
-option.SSR_RESOLUTION.comment=Controls the resolution of Minecraft's screen-space substitute for Source's planar reflection render target.
+option.SSR_RESOLUTION=SSR Resolution
+option.SSR_RESOLUTION.comment=Sets the resolution used for SSR. Lower scales improve performance and reduce reflection detail; 1.0x uses full screen resolution.
 value.SSR_RESOLUTION.0=0.25x
 value.SSR_RESOLUTION.1=0.5x
 value.SSR_RESOLUTION.2=0.75x
 value.SSR_RESOLUTION.3=1.0x
 
 option.EXPENSIVE_WATER_DISTANCE=Expensive Water Distance (Chunks)
-option.EXPENSIVE_WATER_DISTANCE.comment=Automatic mode stays expensive until the final chunk, blends across that chunk, and becomes fully cheap at the selected distance.
+option.EXPENSIVE_WATER_DISTANCE.comment=In Auto mode, expensive water blends into cheap water across the final chunk and becomes fully cheap at this distance.
 
 option.CHEAP_WATER_FRESNEL_F0=Cheap Water Fresnel Floor
-option.CHEAP_WATER_FRESNEL_F0.comment=Minimum envmap response for Minecraft's missing local cubemaps. 0.0 is the exact Source formula; 0.04 is physical water F0.
+option.CHEAP_WATER_FRESNEL_F0.comment=Sets the minimum sky reflection at normal incidence. 0.0 follows Source's Fresnel formula; the default 0.04 keeps Minecraft's cubemap-free fallback readable.
 
-option.REFRACTION_MULTIPLIER=Refraction Multiplier
-option.REFRACTION_MULTIPLIER.comment=Multiplies the selected VMT $refractamount. 1.0 is the shipped value.
+option.REFRACTION_MULTIPLIER=Refraction Scale
+option.REFRACTION_MULTIPLIER.comment=Scales the refraction amount from the selected Source material. 1.0 preserves the material's original value.
 
-option.REFLECTION_MULTIPLIER=Reflection Multiplier
-option.REFLECTION_MULTIPLIER.comment=Multiplies the selected VMT reflection contribution. 1.0 is the shipped value.
+option.REFLECTION_MULTIPLIER=Reflection Scale
+option.REFLECTION_MULTIPLIER.comment=Scales the reflection amount from the selected Source material. 1.0 preserves the material's original value.
 
-option.WATER_NORMAL_SCALE=Normal Map Tiling
-option.WATER_NORMAL_SCALE.comment=Controls how often the animated water normal map repeats across the surface.
+option.WATER_NORMAL_SCALE=Normal Map Scale
+option.WATER_NORMAL_SCALE.comment=Scales the surface normal map in world space. Higher values create smaller, denser ripples.
 
-option.WATER_SPEED_MULTIPLIER=Water Speed Multiplier
-option.WATER_SPEED_MULTIPLIER.comment=Scales all shipped VMT UV scroll rates. 1.0 uses Source time directly.
+option.WATER_SPEED_MULTIPLIER=Water Animation Speed
+option.WATER_SPEED_MULTIPLIER.comment=Scales normal-map scrolling and frame animation. 1.0 preserves the base rates of the selected material and animation mode.
 
 option.REFLECTION_OVERBRIGHT=Reflection Overbright
-option.REFLECTION_OVERBRIGHT.comment=Applies Source-style reflection overbright when refraction blur is enabled.
+option.REFLECTION_OVERBRIGHT.comment=Applies Source-style overbright to reflections when surface refraction blur is active. 1.0 leaves brightness unchanged.
 
 option.SURFACE_REFRACTION_BLUR=Surface Refraction Blur
-option.SURFACE_REFRACTION_BLUR.comment=Adds optional blur to the water surface. The selected Episode Two VMTs ship with this disabled.
+option.SURFACE_REFRACTION_BLUR.comment=Blurs the refracted scene seen through the water surface. The included Source materials do not enable it; 0.0 keeps the view sharp.
 
-option.UNDERWATER_OVERLAY_MULTIPLIER=Underwater Overlay Multiplier
-option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Multiplies water_warp01 $refractamount .04. Riverbed 02 intentionally has no overlay.
+option.UNDERWATER_OVERLAY_MULTIPLIER=Underwater Warp Strength
+option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Controls Source-style full-screen refraction while the camera is underwater. Riverbed 02 disables the effect in 2007 mode.
 
-option.UNDERWATER_OVERLAY_SCALE=Underwater Overlay Scale
-option.UNDERWATER_OVERLAY_SCALE.comment=Controls the screen-space scale of the animated underwater normal map.
+option.UNDERWATER_OVERLAY_SCALE=Underwater Warp Scale
+option.UNDERWATER_OVERLAY_SCALE.comment=Scales the underwater warp normal map in screen space. Higher values create a smaller, denser warp pattern.

@@ -90,7 +90,7 @@
 #define CHEAP_WATER_TRANSITION_DISTANCE 16.0
 
 // Minecraft has no local env_cubemap contribution to keep Source's cheap
-// surface readable at normal incidence. Use the physical water F0 instead.
+// surface readable at normal incidence. Use an adjustable Fresnel floor.
 #define CHEAP_WATER_FRESNEL_F0 0.04 // [0.0 0.01 0.02 0.04 0.06 0.08 0.10 0.15 0.20]
 
 // 0 = nature/water_riverbed01 + water_riverbed01_beneath

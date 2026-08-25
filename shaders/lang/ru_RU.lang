@@ -1,0 +1,62 @@
+option.WATER_PRESET=Материал Source
+option.WATER_PRESET.comment=Выбирает пресет water material из Source. Каждый пресет задаёт цвета и fog range над и под водой, refraction/reflection amount и normal-map flow.
+value.WATER_PRESET.0=EP2 Riverbed 01
+value.WATER_PRESET.1=EP2 Riverbed 02
+value.WATER_PRESET.2=EP2 Silo
+value.WATER_PRESET.3=EP2 Tunnels
+
+option.WATER_NORMAL_MODE=Normal Map Animation
+option.WATER_NORMAL_MODE.comment=Выбирает способ анимации water normal map. Source 2007 смешивает три scrolling layers для более плавного движения; Source 2004 использует оригинальную 29-кадровую animated normal map и один scrolling layer.
+value.WATER_NORMAL_MODE.0=Source 2007 (Orange Box)
+value.WATER_NORMAL_MODE.1=Source 2004 (классика)
+
+option.WATER_QUALITY=Source Water LOD
+option.WATER_QUALITY.comment=Управляет Source-style LOD между expensive и cheap water. Auto переводит expensive path с refraction и optional SSR в cheap path с fog color и sky fallback на выбранной дистанции.
+value.WATER_QUALITY.0=Auto
+value.WATER_QUALITY.1=Force Expensive
+value.WATER_QUALITY.2=Force Cheap
+
+option.SSR_QUALITY=SSR Quality
+option.SSR_QUALITY.comment=SSR заменяет planar reflections из Source в screen space. SSR Off сохраняет Source-style sky fallback; All Reflections Off отключает все отражения на поверхности.
+value.SSR_QUALITY.3=SSR Off (Sky Fallback)
+value.SSR_QUALITY.4=All Reflections Off
+value.SSR_QUALITY.0=Производительность
+value.SSR_QUALITY.1=Сбалансированное
+value.SSR_QUALITY.2=Высокое
+
+option.SSR_RESOLUTION=SSR Resolution
+option.SSR_RESOLUTION.comment=Задаёт resolution scale для SSR. Меньшие значения повышают производительность и снижают детализацию отражений; 1.0x использует native screen resolution.
+value.SSR_RESOLUTION.0=0.25x
+value.SSR_RESOLUTION.1=0.5x
+value.SSR_RESOLUTION.2=0.75x
+value.SSR_RESOLUTION.3=1.0x
+
+option.EXPENSIVE_WATER_DISTANCE=Expensive Water Distance (чанки)
+option.EXPENSIVE_WATER_DISTANCE.comment=В режиме Auto переход expensive → cheap занимает последний чанк и завершается на выбранной дистанции.
+
+option.CHEAP_WATER_FRESNEL_F0=Cheap Water Fresnel Floor
+option.CHEAP_WATER_FRESNEL_F0.comment=Задаёт минимальную силу sky reflection при normal incidence. 0.0 повторяет Fresnel term Source; default 0.04 сохраняет читаемость fallback при отсутствии local cubemap.
+
+option.REFRACTION_MULTIPLIER=Refraction Scale
+option.REFRACTION_MULTIPLIER.comment=Масштабирует refraction amount выбранного Source material. 1.0 сохраняет оригинальное значение материала.
+
+option.REFLECTION_MULTIPLIER=Reflection Scale
+option.REFLECTION_MULTIPLIER.comment=Масштабирует reflection amount выбранного Source material. 1.0 сохраняет оригинальное значение материала.
+
+option.WATER_NORMAL_SCALE=Normal Map Scale
+option.WATER_NORMAL_SCALE.comment=Масштабирует surface normal map в world space. Чем выше значение, тем мельче и плотнее рябь.
+
+option.WATER_SPEED_MULTIPLIER=Water Animation Speed
+option.WATER_SPEED_MULTIPLIER.comment=Масштабирует normal-map scrolling и frame animation. 1.0 сохраняет base rates, заданные выбранными material preset и animation mode.
+
+option.REFLECTION_OVERBRIGHT=Reflection Overbright
+option.REFLECTION_OVERBRIGHT.comment=Применяет Source-style overbright к отражениям, когда активен Surface Refraction Blur. 1.0 не изменяет яркость.
+
+option.SURFACE_REFRACTION_BLUR=Surface Refraction Blur
+option.SURFACE_REFRACTION_BLUR.comment=Размывает refracted scene, видимую сквозь поверхность воды. Текущие Source materials не включают этот эффект; при 0.0 изображение остаётся чётким.
+
+option.UNDERWATER_OVERLAY_MULTIPLIER=Underwater Warp Strength
+option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Управляет Source-style fullscreen refraction под водой. Riverbed 02 отключает эффект в режиме Source 2007.
+
+option.UNDERWATER_OVERLAY_SCALE=Underwater Warp Scale
+option.UNDERWATER_OVERLAY_SCALE.comment=Масштабирует normal map подводного warp-эффекта в screen space. Чем выше значение, тем мельче и плотнее паттерн.
