@@ -1,8 +1,34 @@
 # Source Water
 
-Source Water is a Minecraft Iris shader pack that recreates Source Engine water by reverse-engineering the 2004 and 2007 renderer revisions, shaders, and material behavior.
+Source Water is a focused Minecraft shader pack for Iris that replaces vanilla water rendering with a reconstruction of water from Source Engine games. Its goal is to bring the appearance and behavior of classic Source water into Minecraft without turning the pack into a general lighting or art-style overhaul.
 
-The 2007 path is the default. Included material presets reproduce water from Half-Life 2, Episode One, Episode Two, Lost Coast, and Counter-Strike: Source. The optional 2004 normal-animation mode restores the original 29-frame animated normal map and classic single-flow sampling. Source planar reflections are adapted to Minecraft with screen-space reflections, while refraction, Fresnel, fog, cheap-water distance blending, and underwater behavior follow their Source counterparts where the rendering pipelines permit it.
+The implementation is based primarily on the Source 2007 renderer, with the 2004 renderer preserved as an optional classic normal-animation mode. Water materials are selected manually in the shader settings rather than inferred from Minecraft biomes, allowing the same world to use the character of a specific Source game or map.
+
+## Recreated Source behavior
+
+- Expensive and cheap water rendering with a distance-based LOD transition.
+- Material-specific surface and underwater fog colors, fog ranges, refraction, reflection distortion, and normal-map flow.
+- Fresnel-driven reflections, three-layer Source 2007 normal movement, and the original 29-frame Source 2004 animated normal map.
+- Separate underwater material behavior and optional full-screen water warp.
+
+## Minecraft adaptations
+
+- Source planar reflection render targets are replaced with screen-space reflections for visible scene geometry and a sky fallback when SSR cannot provide a result.
+- Source environment cubemaps are approximated with a light-aware Minecraft sky reflection, including the cheap-water path.
+- Source-unit fog distances are converted to Minecraft blocks, while the expensive-to-cheap water transition is configured in chunks.
+- Vanilla underwater tint and fog are removed so that the selected Source material controls underwater color and visibility.
+
+## Included materials
+
+- Half-Life 2 — Canals 03
+- Half-Life 2 — Canals Clear
+- Half-Life 2: Lost Coast — ATI
+- Half-Life 2: Episode One — Riverbed 01
+- Half-Life 2: Episode Two — Riverbed 01
+- Half-Life 2: Episode Two — Riverbed 02
+- Half-Life 2: Episode Two — Silo
+- Half-Life 2: Episode Two — Tunnels
+- Counter-Strike: Source — Militia
 
 Pairs especially well with [Squake](https://modrinth.com/mod/squake-fabric-updated).
 
