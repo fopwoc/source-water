@@ -5,13 +5,17 @@ on:
     branches:
       - master
     paths-ignore:
+      - '.github/assets/**'
       - '**/*.md'
+      - COPYRIGHT
       - LICENSE
   pull_request:
     branches:
       - master
     paths-ignore:
+      - '.github/assets/**'
       - '**/*.md'
+      - COPYRIGHT
       - LICENSE
 
 permissions:

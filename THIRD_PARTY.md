@@ -2,11 +2,13 @@
 
 Source Water is an independent, non-commercial fan project.
 
+The implementation is based on reverse engineering and study of the [Source SDK 2004](https://github.com/Source-SDK-Base-Legacy-Project/source-sdk-2004) and [Source SDK 2007](https://github.com/Source-SDK-Base-Legacy-Project/source-sdk-2007).
+
 ## Valve Source Engine references and assets
 
 The water implementation was developed by studying and reverse-engineering Source Engine revisions from 2004 and 2007. Portions of the behavior are adaptations of algorithms documented in Source SDK shader code.
 
-The following textures are derived from Valve Source Engine water normal maps and are not covered by the project's WTFPL:
+The following textures are derived from Valve Source Engine water normal maps and are not covered by the project's WTFNMFPL:
 
 - `shaders/textures/water_normal/mip0.frame0.png`
 - `shaders/textures/water_normal/atlas.png`

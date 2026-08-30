@@ -4,7 +4,10 @@ Shader pack for Iris that replaces vanilla water rendering with a reconstruction
 
 The implementation is based primarily on the Source 2007 renderer, with the 2004 renderer preserved as an optional classic normal-animation mode.
 
-The main inspiration for that shader pack was a random YouTube video about Chinese cs 1.6 F2P version where some Source graphical features was packported. Like *water*!
+The main inspiration for this pack was a random YouTube video about Chinese cs 1.6 F2P version where some Source graphical features was packported. Such as *water*!
+
+> [!NOTE]
+> This project contains AI-generated code. See [AI_USAGE.md](AI_USAGE.md) for details.
 
 ## Recreated Source behavior
 
@@ -34,9 +37,9 @@ The main inspiration for that shader pack was a random YouTube video about Chine
 
 Pairs especially well with [Squake](https://modrinth.com/mod/squake-fabric-updated).
 
-![](.github/assets/tunnels_2007.png)
-![](.github/assets/tunnels_2004.png)
-![](.github/assets/cheap.png)
+![Source 2007 water in the Episode Two tunnels](.github/assets/tunnels_2007.png)
+![Source 2004 water in the Episode Two tunnels](.github/assets/tunnels_2004.png)
+![Cheap-water rendering at a distance](.github/assets/cheap.png)
 
 ## Installation
 
@@ -57,10 +60,4 @@ Validate all shader variants and build the distributable ZIP:
 
 ## References and attribution
 
-The implementation is based on reverse engineering and study of the [Source SDK 2004](https://github.com/Source-SDK-Base-Legacy-Project/source-sdk-2004) and [Source SDK 2007](https://github.com/Source-SDK-Base-Legacy-Project/source-sdk-2007).
-
-Developed with assistance from **ChatGPT 5.6 Sol**.
-
-This is an independent, unofficial fan project. It is not affiliated with or endorsed by Valve, Mojang, Microsoft or Iris.
-
-Original project code and documentation are available under the [WTFPL](LICENSE). Source-derived assets and inherited shader components are not relicensed; see [COPYRIGHT](COPYRIGHT) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Original project code and documentation are available under the [WTFNMFPL](LICENSE). Source-derived assets and inherited shader components are not relicensed; see [COPYRIGHT](COPYRIGHT) and [THIRD_PARTY.md](THIRD_PARTY.md).

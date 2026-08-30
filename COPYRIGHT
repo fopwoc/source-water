@@ -1,9 +1,5 @@
-Copyright (C) 2026 Ilya Dobryakov
+Copyright (C) 2026 Ilya Dobryakov <https://github.com/fopwoc>
 
-The original Source Water code and documentation are licensed under the
-WTFPL, Version 2, as reproduced in LICENSE.
+Licensed under WTFNMFPL.
 
-This license does not apply to third-party components or Source-derived
-assets included in the project. Those materials remain subject to their
-respective copyright and license terms. See THIRD_PARTY_NOTICES.md for
-details.
+Some bundled material is not covered by this license. See THIRD_PARTY.md.

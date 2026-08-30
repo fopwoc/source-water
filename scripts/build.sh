@@ -14,7 +14,9 @@ if [ -z "$version" ]; then
 fi
 
 if ! printf '%s\n' "$version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
-    version=$(git -C "$project_root" rev-parse --short=12 HEAD)
+    commit_date=$(git -C "$project_root" show -s --format=%cs HEAD | tr -d '-')
+    commit_hash=$(git -C "$project_root" rev-parse --short=8 HEAD)
+    version="$commit_date-$commit_hash"
 fi
 
 dist_dir="$project_root/dist"
@@ -31,9 +33,10 @@ rm -f "$archive"
         -X \
         "$archive" \
         shaders \
+        AI_USAGE.md \
         COPYRIGHT \
         LICENSE \
-        THIRD_PARTY_NOTICES.md \
+        THIRD_PARTY.md \
         README.md \
         -x '*.DS_Store'
 )
