@@ -65,3 +65,6 @@ option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Changes the strength of full-screen
 
 option.UNDERWATER_OVERLAY_SCALE=Underwater Warp Scale
 option.UNDERWATER_OVERLAY_SCALE.comment=Scales the underwater warp normal map in screen space. Higher values create a smaller, denser warp pattern.
+
+option.UNDERWATER_FOG_DISTANCE=Underwater Fog Distance
+option.UNDERWATER_FOG_DISTANCE.comment=Scales the underwater fog range of the selected Source material. Values below 1.0 make the water murkier, values above make it clearer; 1.0 preserves the material's original fog start and end.

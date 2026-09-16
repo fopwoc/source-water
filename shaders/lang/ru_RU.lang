@@ -65,3 +65,6 @@ option.UNDERWATER_OVERLAY_MULTIPLIER.comment=Меняет силу полноэ�
 
 option.UNDERWATER_OVERLAY_SCALE=Масштаб искажения под водой
 option.UNDERWATER_OVERLAY_SCALE.comment=Масштабирует карту нормалей подводного искажения в экранном пространстве. Высокие значения создают более мелкий и плотный узор искажения.
+
+option.UNDERWATER_FOG_DISTANCE=Дальность подводного тумана
+option.UNDERWATER_FOG_DISTANCE.comment=Масштабирует дальность подводного тумана выбранного материала Source. Значения ниже 1.0 делают воду мутнее, выше — прозрачнее; 1.0 сохраняет исходные начало и конец тумана материала.

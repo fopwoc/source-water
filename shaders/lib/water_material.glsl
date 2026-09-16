@@ -80,6 +80,10 @@
 #define UNDERWATER_OVERLAY_MULTIPLIER 1.0 // [0.0 0.25 0.5 0.75 1.0 1.25 1.5 2.0]
 #define UNDERWATER_OVERLAY_SCALE 1.0 // [0.5 1.0 1.5 2.0 3.0 4.0]
 
+// Scales the beneath material's $fogstart and $fogend together, so presets
+// with a negative $fogstart keep their non-zero fog at the camera.
+#define UNDERWATER_FOG_DISTANCE 1.0 // [0.25 0.5 0.75 1.0 1.25 1.5 2.0 3.0 4.0]
+
 // Source characters are about 72 units tall; Minecraft's player is 1.8 blocks.
 // This is the only unit conversion applied to VMT fog distances.
 #define SOURCE_UNITS_PER_BLOCK 40.0
@@ -374,8 +378,8 @@ float sourceAboveWaterFogFactor(float distanceInBlocks) {
 float sourceBelowWaterFogFactor(float distanceInBlocks) {
     return sourceWaterFogFactor(
         distanceInBlocks,
-        WATER_BELOW_FOG_START,
-        WATER_BELOW_FOG_END
+        WATER_BELOW_FOG_START * UNDERWATER_FOG_DISTANCE,
+        WATER_BELOW_FOG_END * UNDERWATER_FOG_DISTANCE
     );
 }
 
